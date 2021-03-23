@@ -1,0 +1,5 @@
+HOSTNAME = localhost;
+DBNAME   = digitalsignage;
+USERNAME = root;
+PASSWORD = ;
+PORT     = ;

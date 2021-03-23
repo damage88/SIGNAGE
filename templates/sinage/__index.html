@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Resizable - Default functionality</title>
+  <link rel="stylesheet" href="css/fontawesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.css">
+   <link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen"/>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  #resizable { width: 150px; height: 150px; padding: 0.5em; }
+  #resizable h3 { text-align: center; margin: 0; }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="js/jquery-ui-1.12.1/jquery-ui.js"></script>
+  <script src="js/editeur.js"></script>
+  
+
+  <script>
+  $( function() {
+    $( ".resizable" ).resizable();
+    $( ".selectable" ).selectable();
+    $( ".draggable" ).draggable({ handle: ".todrag" });
+  } );
+  </script>
+
+  
+
+</head>
+<body>
+
+  
+
+
+  <div class="menu" style="width:1000px; margin:0 auto;margin-top: 50px; ">
+    <button class="calque" data-tpl="tpl_calque">Calque</button>
+    <button class="calque" data-tpl="tpl_p">T</button>
+    <button class="calque" data-tpl="tpl_marquee">T <i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+
+    <span>
+        <a class="fancybox " href="responsivefilemanager/dialog.php?type=2&field_id=img_url_temp&relative_url=1" type="button"><i class="fa fa-image"></i></a>
+        <input type="hidden" id="img_url_temp">
+    </span>
+
+    <span>
+        <a class="fancybox " href="responsivefilemanager/dialog.php?type=2&field_id=video_url_temp&relative_url=1" type="button"><i class="fa fa-video-camera"></i></a>
+        <input type="hidden" id="video_url_temp">
+    </span>
+
+    <span>
+        
+    </span>
+
+    
+  </div>
+
+    <div class="editor-commands" style="width:1000px; margin:0 auto;margin-top: 10px; ">        
+        
+        <select onchange="commande('formatBlock', this.value); //this.selectedIndex = 0;">
+          <option value="">Titre</option>
+          <option value="h1">Titre 1</option>
+          <option value="h2">Titre 2</option>
+          <option value="h3">Titre 3</option>
+          <option value="h4">Titre 4</option>
+          <option value="h5">Titre 5</option>
+          <option value="h6">Titre 6</option>
+        </select>
+
+        <select onchange="commande('fontSize', this.value); //this.selectedIndex = 0;">
+          <option value="">Taille</option>
+          <option value="1">Taille 1</option>
+          <option value="2">Taille 2</option>
+          <option value="3">Taille 3</option>
+          <option value="4">Taille 4</option>
+          <option value="5">Taille 5</option>
+          <option value="6">Taille 6</option>
+          <option value="7">Taille 7</option>
+        </select>
+
+        <select onchange="commande('backColor', this.value); //this.selectedIndex = 0;">
+          <option value="">Back Color</option>
+          <option value="#000">Noir</option>
+          <option value="#f00">Rouge</option>
+          <option value="#0f0">Vert</option>
+          <option value="#00f">Bleu</option>
+          
+        </select>
+
+        <select onchange="commande('foreColor', this.value); //this.selectedIndex = 0;">
+          <option value="">Font Color</option>
+          <option value="#000">Noir</option>
+          <option value="#f00">Rouge</option>
+          <option value="#0f0">Vert</option>
+          <option value="#00f">Bleu</option>
+          
+        </select>
+
+        <input type="button" value="H1" style="font-weight: bold;" onclick="commande('formatBlock', 'h1');" />
+
+
+        <button onclick="commande('undo')"><i class="fa fa-undo" aria-hidden="true"></i></button>
+        <button onclick="commande('redo')"><i class="fa fa-repeat" aria-hidden="true"></i></button>
+        
+        <input type="button" onclick="commande('insertHorizontalRule')" value="<hr>" />
+        
+        <button onclick="commande('bold')"><i class="fa fa-bold" aria-hidden="true"></i></button>
+        <button onclick="commande('italic')"><i class="fa fa-italic" aria-hidden="true"></i></button>
+        <button onclick="commande('underline')"><i class="fa fa-underline" aria-hidden="true"></i></button>
+        <button onclick="commande('strikeThrough')"><i class="fa fa-strikethrough" aria-hidden="true"></i></button>
+
+        <button onclick="commande('justifyLeft')"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+        <button onclick="commande('justifyCenter')"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+        <button onclick="commande('justifyRight')"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+        <button onclick="commande('justifyFull')"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+        
+        <button onclick="commande('insertUnorderedList')"><i class="fa fa-list-ul" aria-hidden="true"></i></button>
+        <button onclick="commande('insertOrderedList')"><i class="fa fa-list-ol" aria-hidden="true"></i></button>
+
+        <button onclick="commande('indent')"><i class="fa fa-indent" aria-hidden="true"></i></button>
+        <button onclick="commande('outdent')"><i class="fa fa-outdent" aria-hidden="true"></i></button>
+
+        <button onclick="commande('subscript')"><i class="fa fa-subscript" aria-hidden="true"></i></button>
+        <button onclick="commande('superscript')"><i class="fa fa-superscript" aria-hidden="true"></i></button>
+        <button onclick="commande('formatBlock', 'p')"><i class="fa fa-paragraph" aria-hidden="true"></i></button>
+       
+    </div>
+
+    <div class="menu" style="width:1000px; margin:0 auto;margin-top: 10px; ">
+        <ul class="contextmenu">
+            <li><a href="#" onclick=""><i class="fa fa-picture-o"></i>Background</a></li>
+            <li><a href="#" onclick="firstCalque()"></i>Premier plan</a></li>
+            <li><a href="#" onclick="upCalque()"><i class="fa fa-plus-circle"></i>Avant</a></li>
+            <li><a href="#" onclick="downCalque()"><i class="fa fa-minus-circle"></i>Arrière</a></li>
+            <li><a href="#" onclick="lastCalque()"></i>Arrière plan</a></li>
+            <li><a href="#" onclick="deleteCalque()"><i class="fa fa-times"></i>Effacer</a></li>
+        </ul>
+    </div> 
+
+  <section id="machine" class="__selectable" style="position:relative;width:1000px;height:600px; margin:0 auto; border:1px solid #000; margin-bottom: 50px; padding:10px; overflow: hidden">
+
+    <!--<div class="ui-widget-content resizable draggable" style="z-index:30; width:100px;height:100px; top:10px;left:10px;position:absolute; padding:10px;" >
+      <span class="todrag"><i class="fa fa-arrows" aria-hidden="true"></i></span>
+      <div class="inner_text" contenteditable="true">Texte exemple</div>
+      <span class="fake_after"></span>
+    </div>-->
+ 
+    <!--<div class="resizable draggable ui-widget-content" style="width:300px;height:300px;">
+      <h3 class="ui-widget-header">Box </h3>
+    </div>
+
+    <div class="resizable draggable ui-widget-content" style="width:300px;height:300px;">
+      <h3 class="ui-widget-header">Resizable</h3>
+    </div>-->
+
+    
+    
+ </section>
+
+    <script type="text/javascript" src="js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    <script type="text/javascript" src="js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <script type="text/javascript" src="js/jquery.observe_field.js"></script>
+    
+
+</body>
+</html>

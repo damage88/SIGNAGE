@@ -1,0 +1,143 @@
+/**
+ *
+ *
+ * @author Josh Lobe
+ * http://ultimatetinymcepro.com
+ */
+ 
+#body {
+	width: 95%;
+	height: 400px;
+	padding: 10px;
+	
+	background: #fbfbfb;
+	background: -moz-linear-gradient(top, #fbfbfb 0%, #dedede 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbfb), color-stop(100%,#dedede));
+	background: -webkit-linear-gradient(top, #fbfbfb 0%,#dedede 100%);
+	background: -o-linear-gradient(top, #fbfbfb 0%,#dedede 100%);
+	background: -ms-linear-gradient(top, #fbfbfb 0%,#dedede 100%);
+	background: linear-gradient(to bottom, #fbfbfb 0%,#dedede 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#dedede',GradientType=0 );
+	
+	border: 1px solid #CCC;
+	overflow:hidden;
+	font-family: 'tahoma';
+	margin:0 auto;
+}
+#search-results-block {
+	float: left;
+	width: 50%;
+	width:391px;
+	display: block;
+	padding: 5px;
+	max-height: 220px;
+	min-height: 220px;
+	overflow-y: auto;
+	background-color: #FFF;
+	border:1px solid #CCC;
+	font-size: 12px;
+}
+#sidebar_right {
+	float: left;
+	margin-left: 10px;
+	width: 40%;
+}
+#video_preview {
+	width:330px;
+	min-height:220px;
+	max-height:220px;
+	height:230px;
+}
+
+.form-control {
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+	color: #555555;
+	font-size: 12px;
+	height: 34px;
+	line-height: 1.42857;
+	padding: 6px 12px;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+.form-control:focus {
+	border-color: #66AFE9;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+	outline: 0 none;
+}
+td.form_label {
+	text-align: right;	
+}
+
+td{
+	font-size: 12px;
+}
+
+
+
+.infos_video input{
+	width:400px;
+}
+
+.youtube_info, .youtube_image {
+    background-color: #EEEEEE;
+    padding: 10px;
+	margin: 5px;
+}
+
+
+.btn-primary, .btn-default {
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 1px 1px rgba(0, 0, 0, 0.075);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	font-weight: bold;
+	border:1px solid #ddd;
+}
+.btn-primary {
+	background-image: linear-gradient(to bottom, #428BCA 0px, #3071A9 100%);
+	background-repeat: repeat-x;
+	border-color: #2D6CA2;
+	color: #FFF;
+	padding: 5px 20px;
+}
+.btn-default {
+	background-image: linear-gradient(to bottom, #FFFFFF 0px, #E6E6E6 100%);
+	background-repeat: repeat-x;
+	border-color: #CCCCCC;
+	text-shadow: 0 1px 0 #FFFFFF;
+	padding: 5px 15px;
+}
+
+
+#youtube_insert {
+	float:right;
+	margin-right:20px;
+	cursor:pointer;
+}
+#youtube_cancel {
+	float:right;
+	margin-right:20px;
+	cursor:pointer;
+}
+#search_youtube {
+	cursor:pointer;
+}
+
+.extra_opts {
+	padding-left:40px;
+}
+.load_more_results {
+	text-align:center;
+	display:block;
+	margin:20px 0px;
+}
+.get_more_results {
+	cursor:pointer;
+	text-decoration:underline;
+	border:1px solid #CCC;
+}
+
+
+.ui-button-text-only {
+	padding: 0;
+	font-size: 12px;
+}

@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+}
+
+#info_message{
+    font-family: 'Open Sans', sans-serif;
+    display:inline-block;
+    top: 10px;
+    right:10px;
+    min-width:300px;
+    position: fixed;
+    z-index: 50000;
+    margin: 0;
+    padding: 10px;
+    display:none;
+    text-align: center;
+}
+.center_auto{
+    margin: 0 auto; /*padding: 15px 25px ;*/
+}
+
+.zone_message{    
+}
+
+#info_message .message_area{
+    /*position:absolute;*/
+    padding-left:70px;
+    display:inline-block;
+    margin:0 auto;
+}
+#info_message .message_area span.link_ribbon{
+    color: #999999;
+    text-decoration: underline;
+    cursor: pointer;
+}
+#info_message .button_area{
+    display:inline-block;
+    position:absolute;
+    right:10px;
+    top:10px;
+    width: 11px;
+    height: 10px;
+    
+}
+.error_bg{
+    /*background: url('../img/error_bg.png') 0 0 repeat-x;*/
+    background:  rgba(255,214,214,1); #FCAD75;, rgba(255,242,242,0.98));
+    border: 1px solid #f2aaaa;
+}
+.error_bg .message_area{
+    font:bold 18px ;
+    color: #a20510;
+    text-shadow:none; 0 1px 0 #fff; 
+}
+.error_bg .button_area{
+    background: url('../img/error_close.png') 0 0 no-repeat;    
+    cursor: pointer;
+}
+.error_bg .info_more_descrption{
+
+    -moz-box-shadow: 0 0 5px #b2495b;
+    -webkit-box-shadow: 0 0 5px #b2495b;
+    box-shadow: 0 0 5px #b2495b;
+}
+.succ_bg{
+    /*background: url('../img/succ_bg.png') 0 0 repeat-x;*/
+    background: rgba(207,244,197,1);, rgba(228,249,230,0.98));
+    border: 1px solid #61e967;
+}
+.succ_bg .message_area{
+    font:bold 18px ;
+    color: #2f7c00;
+    text-shadow:none; 0 1px 0 #fff; 
+}
+.succ_bg .button_area{
+    background: url('../img/succ_close.png') 0 0 no-repeat;    
+    cursor: pointer;
+}
+.info_bg{
+    /*background: url('../img/info_bg.png') 0 0 repeat-x;*/
+    background:rgba(203,245,249,1);,rgba(232,253,254,0.98));
+    border: 1px solid #8bccd2;
+}
+.info_bg .message_area{
+    font:bold 18px ;
+    color: #0d9a95;
+    text-shadow:none; 0 1px 0 #fff; 
+}
+.info_bg .button_area{
+    background: url('../img/info_close.png') 0 0 no-repeat;    
+    cursor: pointer;
+}
+.warn_bg{
+    /*background: url('../img/warn_bg.png') 0 0 repeat-x;*/
+    background: rgba(253,247,177,1);, rgba(254,251,216,0.98));
+    border: 1px solid #ece991;
+}
+.warn_bg .message_area{
+    font:bold 18px ;
+    color: #a39709;
+    text-shadow:none; 0 1px 0 #fff; 
+}
+.warn_bg .button_area{
+    background: url('../img/warn_close.png') 0 0 no-repeat;    
+    cursor: pointer;
+}
+
+/*******************************************************
+                        ICONES
+*******************************************************/
+.icone{
+    float: left;
+   
+}
+
+.ico_info { background: url('../img/ico_info48.png') center left no-repeat;  }
+.ico_error{ background: url('../img/ico_error48.png') center left no-repeat;  }
+.ico_succ { background: url('../img/ico_succes48.png') center left no-repeat;  }
+.ico_warn { background: url('../img/ico_warn48.png') center left no-repeat;  }
+
+
+/******************************************************/
+.clearboth{
+    clear: both;
+}
+.info_more_descrption{
+    display: none;
+    background: #fff;
+    margin: 0 auto;
+    padding: 5px;
+    background: #fbfbfb;
+    overflow: auto;
+}
+.succ_bg .info_more_descrption{    
+    -moz-box-shadow: 0 0 5px #56a25e;
+    -webkit-box-shadow: 0 0 5px #56a25e;
+    box-shadow: 0 0 5px #56a25e;
+}
